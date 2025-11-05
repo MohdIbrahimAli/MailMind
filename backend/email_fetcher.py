@@ -40,7 +40,7 @@ class EmailFetcher:
         self.service = build('gmail', 'v1', credentials=creds)
         print("✅ Successfully authenticated with Gmail!")
     
-    def fetch_emails(self, max_results=5):
+    def fetch_emails(self, max_results=3):
         """Fetch recent unread emails"""
         try:
             results = self.service.users().messages().list(
